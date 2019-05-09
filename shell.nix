@@ -1,30 +1,22 @@
 {
   pkgs ? import ./pkgs.nix,
-  nodeVersion ? "8_x",
+  nodeVersion ? "10_x",
 }:
   with pkgs;
   let
-    drv = import ./default.nix { inherit pkgs nodeVersion; };
+    nodePackages = lib.getAttrFromPath
+                   (lib.splitString "." ("nodePackages_" + nodeVersion))
+                   pkgs;
+    drv = (import ./package.nix { inherit pkgs nodejs; }).shell;
   in
     drv.overrideAttrs (attrs: {
-      src = null;
-      buildInputs = [ nodePackages_6_x.node2nix ] ++
-                    attrs.buildInputs ++
-                    attrs.checkInputs;
-      shellHook = ''
+      nativeBuildInputs = [ nodePackages.node2nix ]
+                          ++ (lib.attrByPath [ "nativeBuildInputs" ] [] attrs);
+      shellHook = attrs.shellHook + ''
         echo 'Entering ${attrs.name}'
         set -v
-
+        ln --symbolic --no-dereference --force $NODE_PATH node_modules
         export PATH="$(pwd)/dist/bin:$(npm bin):$PATH"
-
-        flow server 2>/dev/null &
-
-        cleanup () {
-          flow stop
-        }
-
-        trap cleanup EXIT
-
         set +v
       '';
     })

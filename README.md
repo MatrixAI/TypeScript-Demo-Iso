@@ -26,3 +26,21 @@ npm run build
 ```
 
 To manage JavaScript dependencies use `package.json`. If you need non-JavaScript dependencies, use the `./default.nix` and `./shell.nix`. Note that `./shell.nix` should contain development dependencies. This means JavaScript dependencies are not directly listed in the Nix expressions.
+
+---
+
+```
+# only generate the package-lock.json
+npm install --package-lock-only
+
+# now run this from it (note that this puts in development)
+# so it's strange, since if we enter into the shell we may want it as well
+node2nix \
+  --development \
+  --input package.json \
+  --lock package-lock.json \
+  --node-env node-env.nix \
+  --output node-packages.nix \
+  --composition package.nix \
+  --nodejs-10
+```

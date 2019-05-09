@@ -1,6 +1,6 @@
 {
   pkgs ? import ./pkgs.nix,
-  nodeVersion ? "8_x"
+  nodeVersion ? "10_x"
 }:
   with pkgs;
   let
@@ -10,10 +10,9 @@
     nodePackages = lib.getAttrFromPath
                    (lib.splitString "." ("nodePackages_" + nodeVersion))
                    pkgs;
+    drv = (import ./package.nix { inherit pkgs nodejs; }).package;
   in
-    stdenv.mkDerivation {
-      name = "javascript-demo";
-      version = "0.0.1";
+    drv.overrideAttrs (attrs: {
       src = lib.cleanSourceWith {
         filter = (path: type:
           ! (builtins.any
@@ -21,10 +20,9 @@
             [
               "node_modules"
               "\.env"
+              "tmp"
             ])
         );
         src = lib.cleanSource attrs.src;
       };
-      buildInputs = [ nodejs dos2unix ];
-      checkInputs = [ flow ];
-    }
+    })
