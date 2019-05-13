@@ -2,7 +2,11 @@
 /pkgs.nix
 /default.nix
 /shell.nix
-/rollup.config.js
+/package.nix
+/node-env.nix
+/node-packages.nix
+/webpack.config.js
+/tsconfig.json
 /doc
 /src
 /test

@@ -21,6 +21,7 @@
               "node_modules"
               "\.env"
               "tmp"
+              "dist"
             ])
         );
         src = lib.cleanSource attrs.src;
