@@ -12,11 +12,16 @@
     "type": "git",
     "url": "https://github.com/MatrixAI/JavaScript-Demo.git"
   },
+  "scripts": {
+    "dev": "webpack --mode=development --watch & webpack-dev-server --mode=development & wait"
+  },
   "dependencies": {
     "@types/react": "^16.8.17",
     "@types/react-dom": "^16.8.4",
+    "@types/react-router-dom": "^4.3.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
+    "react-router-dom": "^5.0.0"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",

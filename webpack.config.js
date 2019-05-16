@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
   entry: "./src/index.tsx",
   output: {
@@ -6,7 +8,7 @@ module.exports = {
   },
   devtool: "source-map",
   devServer: {
-    contentBase: "./",
+    historyApiFallback: true,
     host: process.env.HOST,
     port: process.env.PORT
   },
@@ -21,6 +23,13 @@ module.exports = {
   },
   externals: {
     "react": "React",
-    "react-dom": "ReactDOM"
-  }
+    "react-dom": "ReactDOM",
+    "react-router-dom": "ReactRouterDOM"
+  },
+  plugins: [
+    new webpack.EnvironmentPlugin([
+      'HOST',
+      'PORT'
+    ])
+  ]
 };

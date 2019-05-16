@@ -1,7 +1,11 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './routes';
 
 ReactDOM.render(
-  <p>Hi</p>,
-  document.getElementById("example")
+  <Router>
+    <Routes />
+  </Router>,
+  document.getElementById('root')
 );
