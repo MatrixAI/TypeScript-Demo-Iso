@@ -4,9 +4,9 @@ import Index from './controllers/Index';
 
 function Routes () {
   return (
-    <div>
+    <React.Fragment>
       <Route exact path="/" component={Index} />
-    </div>
+    </React.Fragment>
   );
 }
 
