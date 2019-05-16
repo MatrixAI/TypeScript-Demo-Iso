@@ -1,12 +1,14 @@
 import * as React from 'react';
-import Navigation from '../components/Navigation';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function Index () {
   return (
-    <article>
-      <h1>Home Page</h1>
-      <Navigation />
-    </article>
+    <React.Fragment>
+      <Header />
+      <p>Index Page</p>
+      <Footer />
+    </React.Fragment>
   );
 }
 
