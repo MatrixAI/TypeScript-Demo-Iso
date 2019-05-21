@@ -76,6 +76,15 @@ let
         sha512 = "ui3WwXmjTaY73fOQ3/m3nnajU/Orhi6cEu5rzX+BrAAJxa3eITXZ5ch9suPqtM03OWhAHhPSyBGCN4UKoxO20Q==";
       };
     };
+    "@types/hoist-non-react-statics-3.3.1" = {
+      name = "_at_types_slash_hoist-non-react-statics";
+      packageName = "@types/hoist-non-react-statics";
+      version = "3.3.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz";
+        sha512 = "iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==";
+      };
+    };
     "@types/node-12.0.0" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
@@ -110,6 +119,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/@types/react-dom/-/react-dom-16.8.4.tgz";
         sha512 = "eIRpEW73DCzPIMaNBDP5pPIpK1KXyZwNgfxiVagb5iGiz6da+9A5hslSX6GAQKdO7SayVCS/Fr2kjqprgAvkfA==";
+      };
+    };
+    "@types/react-redux-7.0.9" = {
+      name = "_at_types_slash_react-redux";
+      packageName = "@types/react-redux";
+      version = "7.0.9";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/react-redux/-/react-redux-7.0.9.tgz";
+        sha512 = "fMVX9SneWWw68d/JoeNUh6hj42kx2G30YhPdCYJTOv3xqbJ1xzIz6tEM/xzi7nBvpNbwZkSa9TMsV06kWOFIIg==";
       };
     };
     "@types/react-router-5.0.0" = {
@@ -292,6 +310,15 @@ let
         sha512 = "neyTUVFtahjf0mB3dZT77u+8O0QB89jFdnBkd5P1JgYPbPaia3gXXOVL2fq8VyU2gMMD7SaN7QukTB/pmXYvDA==";
       };
     };
+    "invariant-2.2.4" = {
+      name = "invariant";
+      packageName = "invariant";
+      version = "2.2.4";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz";
+        sha512 = "phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==";
+      };
+    };
     "is-stream-1.1.0" = {
       name = "is-stream";
       packageName = "is-stream";
@@ -436,6 +463,15 @@ let
         sha512 = "aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==";
       };
     };
+    "react-redux-7.0.3" = {
+      name = "react-redux";
+      packageName = "react-redux";
+      version = "7.0.3";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/react-redux/-/react-redux-7.0.3.tgz";
+        sha512 = "vYZA7ftOYlDk3NetitsI7fLjryt/widNl1SLXYvFenIpm7vjb4ryK0EeFrgn62usg5fYkyIAWNUPKnwWPevKLg==";
+      };
+    };
     "react-router-5.0.0" = {
       name = "react-router";
       packageName = "react-router";
@@ -452,6 +488,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/react-router-dom/-/react-router-dom-5.0.0.tgz";
         sha512 = "wSpja5g9kh5dIteZT3tUoggjnsa+TPFHSMrpHXMpFsaHhQkm/JNVGh2jiF9Dkh4+duj4MKCkwO6H08u6inZYgQ==";
+      };
+    };
+    "redux-4.0.1" = {
+      name = "redux";
+      packageName = "redux";
+      version = "4.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/redux/-/redux-4.0.1.tgz";
+        sha512 = "R7bAtSkk7nY6O/OYMVR9RiBI+XghjF9rlbl5806HJbQph0LJVHZrU5oaO4q70eUKiqMRqm4y07KLTlMZ2BlVmg==";
       };
     };
     "regenerator-runtime-0.13.2" = {
@@ -544,6 +589,15 @@ let
         sha512 = "QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==";
       };
     };
+    "symbol-observable-1.2.0" = {
+      name = "symbol-observable";
+      packageName = "symbol-observable";
+      version = "1.2.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/symbol-observable/-/symbol-observable-1.2.0.tgz";
+        sha512 = "e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==";
+      };
+    };
     "tiny-invariant-1.0.4" = {
       name = "tiny-invariant";
       packageName = "tiny-invariant";
@@ -613,10 +667,12 @@ let
       sources."@emotion/memoize-0.7.1"
       sources."@emotion/unitless-0.7.3"
       sources."@types/history-4.7.2"
+      sources."@types/hoist-non-react-statics-3.3.1"
       sources."@types/node-12.0.0"
       sources."@types/prop-types-15.7.1"
       sources."@types/react-16.8.17"
       sources."@types/react-dom-16.8.4"
+      sources."@types/react-redux-7.0.9"
       sources."@types/react-router-5.0.0"
       sources."@types/react-router-dom-4.3.3"
       sources."@types/styled-components-4.1.8"
@@ -637,6 +693,7 @@ let
       sources."history-4.9.0"
       sources."hoist-non-react-statics-3.3.0"
       sources."iconv-lite-0.4.23"
+      sources."invariant-2.2.4"
       sources."is-stream-1.1.0"
       sources."isomorphic-fetch-2.2.1"
       sources."js-tokens-4.0.0"
@@ -651,6 +708,7 @@ let
       sources."react-16.8.6"
       sources."react-dom-16.8.6"
       sources."react-is-16.8.6"
+      sources."react-redux-7.0.3"
       (sources."react-router-5.0.0" // {
         dependencies = [
           sources."isarray-0.0.1"
@@ -658,6 +716,7 @@ let
         ];
       })
       sources."react-router-dom-5.0.0"
+      sources."redux-4.0.1"
       sources."regenerator-runtime-0.13.2"
       sources."resolve-pathname-2.2.0"
       sources."safer-buffer-2.1.2"
@@ -668,6 +727,7 @@ let
       sources."stylis-3.5.4"
       sources."stylis-rule-sheet-0.0.10"
       sources."supports-color-5.5.0"
+      sources."symbol-observable-1.2.0"
       sources."tiny-invariant-1.0.4"
       sources."tiny-warning-1.0.2"
       sources."to-fast-properties-2.0.0"

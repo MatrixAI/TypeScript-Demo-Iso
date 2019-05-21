@@ -3,7 +3,7 @@
     "outDir": "./dist",
     "sourceMap": true,
     "moduleResolution": "node",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "module": "ESNEXT",
     "target": "ESNEXT",
     "jsx": "react",

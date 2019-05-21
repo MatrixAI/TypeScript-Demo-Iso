@@ -1,30 +1,30 @@
+const process = require('process');
+const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: './src/index.tsx',
   output: {
-    filename: "bundle.js",
-    path: __dirname + "/dist"
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist/assets')
   },
   devtool: "source-map",
   devServer: {
-    historyApiFallback: true,
     host: process.env.HOST,
-    port: process.env.PORT
+    port: process.env.PORT,
+    historyApiFallback: true,
+    watchContentBase: true,
+    contentBase: path.resolve(__dirname, 'dist'),
+    publicPath: '/assets/'
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"]
   },
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
-      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+      { test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
+      { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' }
     ]
-  },
-  externals: {
-    "react": "React",
-    "react-dom": "ReactDOM",
-    "react-router-dom": "ReactRouterDOM"
   },
   plugins: [
     new webpack.EnvironmentPlugin([
