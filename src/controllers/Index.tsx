@@ -1,9 +1,7 @@
 import * as React from 'react';
+import { Route } from 'react-router-dom';
 import * as queryString from 'query-string';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Dummies from '../components/Dummies';
-import { connect } from 'react-redux';
+import Home from './Home';
 
 const QueryContext = React.createContext({});
 
@@ -12,9 +10,7 @@ function Index (props) {
   return (
     <React.Fragment>
       <QueryContext.Provider value={queryParameters}>
-        <Header />
-        <p>Index Page</p>
-        <Footer />
+        <Route exact path="/" component={Home} />
       </QueryContext.Provider>
     </React.Fragment>
   );
