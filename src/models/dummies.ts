@@ -1,11 +1,15 @@
 type DummyId = number;
 
-interface Dummy {
-  id: DummyId;
+interface DummyData {
   name: string;
+}
+
+interface Dummy extends DummyData {
+  id: DummyId;
 }
 
 export {
   DummyId,
+  DummyData,
   Dummy
 };

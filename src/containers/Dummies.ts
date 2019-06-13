@@ -1,6 +1,27 @@
-// do we just wrap the dummies component with this
-// and controllers ultimately use this as routable components
-// then these are stateful components, we are mapping them to
-// primarily to avoid the issue where each component maps parameters
-// or we should do it in the controller
-// especially if we need multiple parameters?
+import { connect } from 'react-redux';
+import Dummies from '../components/Dummies';
+import { dummyCreate } from '../models/actions/dummies';
+
+const mapStateToProps = (state) => {
+  // immutable map to array?
+  // how to do this?
+  const dummiesArray = [];
+  state.dummies.forEach((v) => {
+    dummiesArray.push(v);
+  });
+  return {
+    dummies: dummiesArray
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onAddDummy: () => {
+      dispatch(dummyCreate({
+        name: 'dummy!'
+      }));
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dummies);

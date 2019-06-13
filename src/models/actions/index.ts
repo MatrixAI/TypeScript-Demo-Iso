@@ -1,5 +1,13 @@
-import { DummyCreateAction, DummyUpdateAction } from './dummies';
+import {
+  DummyCreateAction,
+  DummyUpdateAction,
+  DummyDeleteAction
+} from './dummies';
 
-type AppAction = (DummyCreateAction | DummyUpdateAction);
+type AppAction = (
+  DummyCreateAction |
+  DummyUpdateAction |
+  DummyDeleteAction
+);
 
 export { AppAction };
