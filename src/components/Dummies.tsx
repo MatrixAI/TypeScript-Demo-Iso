@@ -9,7 +9,7 @@ interface DummyButtonProps {
 
 interface DummiesProps {
   onAddDummy: any,
-  dummies: Array<Dummy>;
+  dummies: any;
   className?: string;
 }
 
@@ -26,7 +26,7 @@ const DummyButtons = styled((props: DummyButtonProps) => {
 const DummiesList = styled((props) => {
   return (
     <ul className={props.className}>
-      {props.dummies.map((dummy, index) => (
+      {props.dummies.map(([index, dummy]) => (
         <li key={index}>{dummy.name}</li>
       ))}
     </ul>

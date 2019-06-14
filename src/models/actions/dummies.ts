@@ -21,7 +21,7 @@ interface DummyDeleteAction extends Action<typeof DUMMY_DELETE> {
 
 // usually this id is provided by the source of truth
 // here we are simulating it with an auto-incremented id
-let dummyIdAuto: DummyId = 0;
+let dummyIdAuto: DummyId = 100;
 
 function dummyCreate (dummyData: DummyData): DummyCreateAction {
   const action: DummyCreateAction = {

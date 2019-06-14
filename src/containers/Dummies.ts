@@ -3,14 +3,8 @@ import Dummies from '../components/Dummies';
 import { dummyCreate } from '../models/actions/dummies';
 
 const mapStateToProps = (state) => {
-  // immutable map to array?
-  // how to do this?
-  const dummiesArray = [];
-  state.dummies.forEach((v) => {
-    dummiesArray.push(v);
-  });
   return {
-    dummies: dummiesArray
+    dummies: state.dummies.entrySeq()
   };
 };
 

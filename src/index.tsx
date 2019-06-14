@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, Store } from 'redux';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
+import promiseMiddleware from 'redux-promise-middleware';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import modernNormalize from 'styled-modern-normalize';
@@ -12,7 +13,8 @@ import Routes from './routes';
 
 const middleware = composeWithDevTools(
   applyMiddleware(
-    thunkMiddleware
+    thunkMiddleware,
+    promiseMiddleware
   )
 );
 
