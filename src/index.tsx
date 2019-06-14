@@ -7,7 +7,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import modernNormalize from 'styled-modern-normalize';
 import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
-import { AppAction } from './models/actions';
 import appReducer, { AppState } from './models/reducers';
 import Routes from './routes';
 
@@ -17,7 +16,7 @@ const middleware = composeWithDevTools(
   )
 );
 
-const store = createStore(appReducer, middleware);
+const store: Store<AppState> = createStore(appReducer, middleware);
 
 const GlobalStyle = createGlobalStyle`
   ${modernNormalize}

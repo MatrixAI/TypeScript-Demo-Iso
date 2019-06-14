@@ -1,14 +1,12 @@
 import { combineReducers } from 'redux';
 import dummies, { DummiesState } from './dummies';
 
-interface AppState {
-  dummies: DummiesState
-}
-
 const appReducer = combineReducers({
   dummies
 });
 
-export default appReducer;
+type AppState = ReturnType<typeof appReducer>
 
 export { AppState };
+
+export default appReducer;
