@@ -148,6 +148,15 @@ let
         sha512 = "xj0DmFjgvAqRfh/kJPO7apD5G30yPQe+8slu/dugioQOkdKpyzc4Fgk4hoTelm6CSHz7pI2PPsW5+Y6GRBF2zw==";
       };
     };
+    "@types/redux-promise-middleware-0.0.11" = {
+      name = "_at_types_slash_redux-promise-middleware";
+      packageName = "@types/redux-promise-middleware";
+      version = "0.0.11";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/redux-promise-middleware/-/redux-promise-middleware-0.0.11.tgz";
+        sha512 = "hOgSTOc8TYfHUP4op1jYDdGycrPIeLq8zbl05BDn18HSXUDhx+xNM7z5u6DmdwTw45gEG/4E+JbRv9bucoi2cg==";
+      };
+    };
     "@types/styled-components-4.1.8" = {
       name = "_at_types_slash_styled-components";
       packageName = "@types/styled-components";
@@ -238,6 +247,15 @@ let
         sha512 = "lAJUJP3M6HxFXbqtGRc0iZrdyeN+WzOWeY0q/VnFzI+kqVrYIzC7bWlKqCW7oCIdzoPkvfp82EVvrTlQ8zsWQg==";
       };
     };
+    "decode-uri-component-0.2.0" = {
+      name = "decode-uri-component";
+      packageName = "decode-uri-component";
+      version = "0.2.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.2.0.tgz";
+        sha1 = "eb3913333458775cb84cd1a1fae062106bb87545";
+      };
+    };
     "encoding-0.1.12" = {
       name = "encoding";
       packageName = "encoding";
@@ -310,6 +328,15 @@ let
         sha512 = "neyTUVFtahjf0mB3dZT77u+8O0QB89jFdnBkd5P1JgYPbPaia3gXXOVL2fq8VyU2gMMD7SaN7QukTB/pmXYvDA==";
       };
     };
+    "immutable-4.0.0-rc.12" = {
+      name = "immutable";
+      packageName = "immutable";
+      version = "4.0.0-rc.12";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/immutable/-/immutable-4.0.0-rc.12.tgz";
+        sha512 = "0M2XxkZLx/mi3t8NVwIm1g8nHoEmM9p9UBl/G9k4+hm0kBgOVdMV/B3CY5dQ8qG8qc80NN4gDV4HQv6FTJ5q7A==";
+      };
+    };
     "invariant-2.2.4" = {
       name = "invariant";
       packageName = "invariant";
@@ -362,6 +389,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/lodash/-/lodash-4.17.11.tgz";
         sha512 = "cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==";
+      };
+    };
+    "lodash-es-4.17.11" = {
+      name = "lodash-es";
+      packageName = "lodash-es";
+      version = "4.17.11";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.11.tgz";
+        sha512 = "DHb1ub+rMjjrxqlB3H56/6MXtm1lSksDp2rA2cNWjG8mlDUYFhUj3Di2Zn5IwSU87xLv8tNIQ7sSwE/YOX/D/Q==";
       };
     };
     "loose-envify-1.4.0" = {
@@ -436,6 +472,15 @@ let
         sha512 = "8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==";
       };
     };
+    "query-string-6.5.0" = {
+      name = "query-string";
+      packageName = "query-string";
+      version = "6.5.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/query-string/-/query-string-6.5.0.tgz";
+        sha512 = "TYC4hDjZSvVxLMEucDMySkuAS9UIzSbAiYGyA9GWCjLKB8fQpviFbjd20fD7uejCDxZS+ftSdBKE6DS+xucJFg==";
+      };
+    };
     "react-16.8.6" = {
       name = "react";
       packageName = "react";
@@ -490,6 +535,15 @@ let
         sha512 = "wSpja5g9kh5dIteZT3tUoggjnsa+TPFHSMrpHXMpFsaHhQkm/JNVGh2jiF9Dkh4+duj4MKCkwO6H08u6inZYgQ==";
       };
     };
+    "redux-3.7.2" = {
+      name = "redux";
+      packageName = "redux";
+      version = "3.7.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/redux/-/redux-3.7.2.tgz";
+        sha512 = "pNqnf9q1hI5HHZRBkj3bAngGZW/JMCmexDlOxw4XagXY2o1327nHH54LoTjiPJ0gizoqPDRqWyX/00g0hD6w+A==";
+      };
+    };
     "redux-4.0.1" = {
       name = "redux";
       packageName = "redux";
@@ -497,6 +551,33 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/redux/-/redux-4.0.1.tgz";
         sha512 = "R7bAtSkk7nY6O/OYMVR9RiBI+XghjF9rlbl5806HJbQph0LJVHZrU5oaO4q70eUKiqMRqm4y07KLTlMZ2BlVmg==";
+      };
+    };
+    "redux-devtools-extension-2.13.8" = {
+      name = "redux-devtools-extension";
+      packageName = "redux-devtools-extension";
+      version = "2.13.8";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/redux-devtools-extension/-/redux-devtools-extension-2.13.8.tgz";
+        sha512 = "8qlpooP2QqPtZHQZRhx3x3OP5skEV1py/zUdMY28WNAocbafxdG2tRD1MWE7sp8obGMNYuLWanhhQ7EQvT1FBg==";
+      };
+    };
+    "redux-promise-middleware-6.1.0" = {
+      name = "redux-promise-middleware";
+      packageName = "redux-promise-middleware";
+      version = "6.1.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/redux-promise-middleware/-/redux-promise-middleware-6.1.0.tgz";
+        sha512 = "C62Ku3TgMwxFh5r3h1/iD+XPdsoizyHLT74dTkqhJ8c0LCbEVl1z9fm8zKitAjI16e6w6+h3mxf6wHdonaYXfQ==";
+      };
+    };
+    "redux-thunk-2.3.0" = {
+      name = "redux-thunk";
+      packageName = "redux-thunk";
+      version = "2.3.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/redux-thunk/-/redux-thunk-2.3.0.tgz";
+        sha512 = "km6dclyFnmcvxhAcrQV2AkZmPQjzPDjgVlQtR0EQjxZPyJ0BnMf3in1ryuR8A2qU0HldVRfxYXbFSKlI3N7Slw==";
       };
     };
     "regenerator-runtime-0.13.2" = {
@@ -542,6 +623,24 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz";
         sha1 = "290cbb232e306942d7d7ea9b83732ab7856f8285";
+      };
+    };
+    "split-on-first-1.1.0" = {
+      name = "split-on-first";
+      packageName = "split-on-first";
+      version = "1.1.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/split-on-first/-/split-on-first-1.1.0.tgz";
+        sha512 = "43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==";
+      };
+    };
+    "strict-uri-encode-2.0.0" = {
+      name = "strict-uri-encode";
+      packageName = "strict-uri-encode";
+      version = "2.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/strict-uri-encode/-/strict-uri-encode-2.0.0.tgz";
+        sha1 = "b9c7330c7042862f6b142dc274bbcc5866ce3546";
       };
     };
     "styled-components-4.2.0" = {
@@ -675,6 +774,11 @@ let
       sources."@types/react-redux-7.0.9"
       sources."@types/react-router-5.0.0"
       sources."@types/react-router-dom-4.3.3"
+      (sources."@types/redux-promise-middleware-0.0.11" // {
+        dependencies = [
+          sources."redux-3.7.2"
+        ];
+      })
       sources."@types/styled-components-4.1.8"
       sources."asap-2.0.6"
       sources."babel-plugin-styled-components-1.10.0"
@@ -685,6 +789,7 @@ let
       sources."css-color-keywords-1.0.0"
       sources."css-to-react-native-2.3.1"
       sources."csstype-2.6.4"
+      sources."decode-uri-component-0.2.0"
       sources."encoding-0.1.12"
       sources."esutils-2.0.2"
       sources."fbjs-0.8.17"
@@ -693,11 +798,13 @@ let
       sources."history-4.9.0"
       sources."hoist-non-react-statics-3.3.0"
       sources."iconv-lite-0.4.23"
+      sources."immutable-4.0.0-rc.12"
       sources."invariant-2.2.4"
       sources."is-stream-1.1.0"
       sources."isomorphic-fetch-2.2.1"
       sources."js-tokens-4.0.0"
       sources."lodash-4.17.11"
+      sources."lodash-es-4.17.11"
       sources."loose-envify-1.4.0"
       sources."memoize-one-5.0.4"
       sources."node-fetch-1.7.3"
@@ -705,6 +812,7 @@ let
       sources."postcss-value-parser-3.3.1"
       sources."promise-7.3.1"
       sources."prop-types-15.7.2"
+      sources."query-string-6.5.0"
       sources."react-16.8.6"
       sources."react-dom-16.8.6"
       sources."react-is-16.8.6"
@@ -717,11 +825,16 @@ let
       })
       sources."react-router-dom-5.0.0"
       sources."redux-4.0.1"
+      sources."redux-devtools-extension-2.13.8"
+      sources."redux-promise-middleware-6.1.0"
+      sources."redux-thunk-2.3.0"
       sources."regenerator-runtime-0.13.2"
       sources."resolve-pathname-2.2.0"
       sources."safer-buffer-2.1.2"
       sources."scheduler-0.13.6"
       sources."setimmediate-1.0.5"
+      sources."split-on-first-1.1.0"
+      sources."strict-uri-encode-2.0.0"
       sources."styled-components-4.2.0"
       sources."styled-modern-normalize-0.2.0"
       sources."stylis-3.5.4"
