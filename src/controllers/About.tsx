@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Dummies from '../containers/Dummies';
 
-function Home (props) {
+function About (props) {
   return (
     <React.Fragment>
       <Header />
@@ -14,4 +14,4 @@ function Home (props) {
   );
 }
 
-export default Home;
+export default About;
