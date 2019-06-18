@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import * as queryString from 'query-string';
 import Home from './Home';
 import About from './About';
-import QueryParams from '../contexts/QueryParams';
+import QueryParamsContext from '../contexts/QueryParamsContext';
 
 function Index (props) {
   const queryParams = queryString.parse(props.location.search);
@@ -13,10 +13,10 @@ function Index (props) {
   // every route component can nest more routes
   return (
     <React.Fragment>
-      <QueryParams.Provider value={queryParams}>
+      <QueryParamsContext.Provider value={queryParams}>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
-      </QueryParams.Provider>
+      </QueryParamsContext.Provider>
     </React.Fragment>
   );
 }

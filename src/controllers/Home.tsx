@@ -1,10 +1,10 @@
 import * as React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import QueryParams from '../contexts/QueryParams';
+import QueryParamsContext from '../contexts/QueryParamsContext';
 
 function Home (props) {
-  const queryParams = React.useContext(QueryParams);
+  const queryParams = React.useContext(QueryParamsContext);
   return (
     <React.Fragment>
       <Header />

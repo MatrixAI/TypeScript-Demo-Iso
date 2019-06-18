@@ -2,26 +2,26 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { Dummy } from '../models/dummies';
 
-interface DummyButtonProps {
+interface DummyButtonsProps {
   onAdd: any,
-  className?: string;
 }
 
 interface DummiesProps {
   onAddDummy: any,
   dummies: any;
-  className?: string;
 }
 
 const Button = styled.button``;
 
-const DummyButtons = styled((props: DummyButtonProps) => {
-  return (
-    <div className={props.className}>
-      <Button onClick={props.onAdd}>Add Dummy</Button>
-    </div>
-  );
-})``;
+const DummyButtons = styled(
+  (props) => {
+    return (
+      <div className={props.className}>
+        <Button onClick={props.onAdd}>Add Dummy</Button>
+      </div>
+    );
+  }
+)<DummyButtonsProps>``;
 
 const DummiesList = styled((props) => {
   return (
@@ -33,15 +33,19 @@ const DummiesList = styled((props) => {
   );
 })``;
 
-const Dummies = styled((props: DummiesProps) => {
-  return (
-    <div className={props.className}>
-      <DummiesList dummies={props.dummies} />
-      <DummyButtons onAdd={props.onAddDummy} />
-    </div>
-  );
-})``;
+const Dummies = styled(
+  (props) => {
+    return (
+      <div className={props.className}>
+        <DummiesList dummies={props.dummies} />
+        <DummyButtons onAdd={props.onAddDummy} />
+      </div>
+    );
+  }
+)<DummiesProps>``;
 
 export default Dummies;
 
-export { DummiesProps };
+export {
+  DummiesProps
+};
