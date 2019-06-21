@@ -1,6 +1,7 @@
 const process = require('process');
 const path = require('path');
 const webpack = require('webpack');
+const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -18,7 +19,10 @@ module.exports = {
     publicPath: '/assets/'
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"]
+    extensions: [".ts", ".tsx", ".js", ".json"],
+    plugins: [
+      new TsConfigPathsPlugin()
+    ]
   },
   module: {
     rules: [

@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
-import Dummies from '../components/Dummies';
-import { dummyCreate } from '../models/actions/dummies';
+import { create, remove, DummyId } from '@matrixai/models/dummies';
+import Dummies from './Component';
+
+let dummyIdAuto: DummyId = 0;
 
 const mapStateToProps = (state) => {
   return {
@@ -11,9 +13,14 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onAddDummy: () => {
-      dispatch(dummyCreate({
-        name: 'dummy!'
+      dummyIdAuto += 1;
+      dispatch(create({
+        name: 'dummy!',
+        id: dummyIdAuto
       }));
+    },
+    onRemoveDummy: (id) => {
+      dispatch(remove(id));
     }
   };
 };

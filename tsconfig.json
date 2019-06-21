@@ -4,9 +4,13 @@
     "sourceMap": true,
     "moduleResolution": "node",
     "noImplicitAny": false,
-    "module": "ESNEXT",
+    "module": "ES6",
     "target": "ESNEXT",
     "jsx": "react",
+    "baseUrl": "./src",
+    "paths": {
+      "@matrixai/*": ["*"]
+    }
   },
   "include": [
     "./src/**/*"
