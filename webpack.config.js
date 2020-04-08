@@ -1,13 +1,17 @@
 const process = require('process');
 const path = require('path');
 const webpack = require('webpack');
-const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
 module.exports = {
   entry: './src/index.tsx',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist/assets')
+    path: path.resolve(__dirname, 'dist')
   },
   devtool: "source-map",
   devServer: {
@@ -16,24 +20,45 @@ module.exports = {
     historyApiFallback: true,
     watchContentBase: true,
     contentBase: path.resolve(__dirname, 'dist'),
-    publicPath: '/assets/'
+    publicPath: '/'
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"],
-    plugins: [
-      new TsConfigPathsPlugin()
-    ]
+    extensions: [".ts", ".tsx", ".js"],
+    plugins: [new TsconfigPathsPlugin()]
   },
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
-      { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' }
+      {
+        test: /.tsx?$/,
+        loader: 'ts-loader',
+        options: {
+          getCustomTransformers: () => ({ before: [styledComponentsTransformer] }),
+        },
+      }
     ]
   },
   plugins: [
     new webpack.EnvironmentPlugin([
       'HOST',
       'PORT'
-    ])
-  ]
+    ]),
+    new HtmlWebpackPlugin({
+      template: '!!ejs-compiled-loader!src/index.ejs',
+      inject: 'body',
+      xhtml: true,
+      filename: 'index.html',
+      templateParameters: {
+        title: 'TypeScript Demo',
+        configJs: `
+          window.config = {
+            HOST: '${process.env.HOST}',
+            PORT: '${process.env.PORT}'
+          };
+        `
+      }
+    })
+  ],
+  watchOptions: {
+    ignored: /node_modules/
+  }
 };
