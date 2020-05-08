@@ -4,8 +4,10 @@
     "sourceMap": true,
     "moduleResolution": "node",
     "noImplicitAny": false,
-    "module": "ES6",
-    "target": "ESNEXT",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "CommonJS",
+    "target": "ES2016",
     "jsx": "react",
     "baseUrl": "./src",
     "paths": {
